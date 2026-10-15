@@ -1,6 +1,13 @@
-﻿# Pizza Delivery — Full-Stack Application
+# Pizza Delivery — Full-Stack Application
 
 A full-stack pizza ordering application built with React, Node.js, Express, and MongoDB.
+
+## 🚀 Live Demo
+
+- **Frontend (Live Website):** [Open Pizza Delivery Website](https://oibsip-git-main-kavyasree1623s-projects.vercel.app/)
+- **Backend (Render API):** [https://oibsip-azjm.onrender.com](https://oibsip-azjm.onrender.com)
+
+> The backend is an API service. Opening its root URL may not display a webpage.
 
 ## Technology Stack
 
