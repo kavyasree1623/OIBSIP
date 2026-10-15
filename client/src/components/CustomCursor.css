@@ -1,0 +1,14 @@
+
+/* Restore the normal browser cursor everywhere */
+* {
+  cursor: auto !important;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  cursor: pointer !important;
+}

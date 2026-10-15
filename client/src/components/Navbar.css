@@ -1,0 +1,147 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(248, 241, 231, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-container {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.navbar-logo-icon {
+  font-size: 27px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  position: relative;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-login {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-login:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.navbar-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.navbar-icon:hover {
+  color: var(--primary);
+}
+
+.cart-count {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+  }
+
+  .navbar-login {
+    padding: 9px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 21px;
+  }
+
+  .navbar-login {
+    display: none;
+  }
+}

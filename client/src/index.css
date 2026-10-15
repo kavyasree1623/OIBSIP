@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  --primary: #c62828;
+  --primary-dark: #9e1f1f;
+
+  --secondary: #2e7d32;
+  --secondary-dark: #1f5c24;
+
+  --background: #f8f1e7;
+  --surface: #ffffff;
+  --surface-soft: #f1e5d5;
+
+  --text-primary: #3e2f28;
+  --text-secondary: #6f6259;
+  --text-light: #9a8d83;
+
+  --border: #dfd1c0;
+
+  --success: #2e7d32;
+  --danger: #c62828;
+
+  --shadow-sm: 0 2px 8px rgba(62, 47, 40, 0.08);
+  --shadow-md: 0 10px 30px rgba(62, 47, 40, 0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --container-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, var(--container-width));
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .page-title {
+    font-size: 34px;
+  }
+}

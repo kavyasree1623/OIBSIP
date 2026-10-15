@@ -1,0 +1,354 @@
+.orders-page {
+    min-height: calc(100vh - 80px);
+    padding: 48px 0 80px;
+    background: #f8f1e7;
+  }
+  
+  .orders-header {
+    margin-bottom: 34px;
+  }
+  
+  .orders-header > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .orders-header h1 {
+    margin: 0;
+    color: #3e2f28;
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    line-height: 1.15;
+  }
+  
+  .orders-header p {
+    margin: 10px 0 0;
+    color: #76665c;
+    font-size: 14px;
+  }
+  
+  /* Orders List */
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .order-history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px;
+    border: 1px solid #eadfd2;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(62, 47, 40, 0.06);
+  }
+  
+  .order-history-main {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .order-history-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fff3e8;
+    color: #c62828;
+  }
+  
+  .order-history-info {
+    min-width: 0;
+  }
+  
+  .order-history-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .order-history-title h2 {
+    margin: 0;
+    color: #3e2f28;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  
+  .order-history-date {
+    margin: 6px 0 0;
+    color: #958378;
+    font-size: 12px;
+  }
+  
+  .order-history-items {
+    max-width: 650px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    color: #76665c;
+    font-size: 13px;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Status */
+  
+  .order-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .order-status-placed {
+    background: #fff4df;
+    color: #a66a00;
+  }
+  
+  .order-status-confirmed {
+    background: #edf4ff;
+    color: #2563a6;
+  }
+  
+  .order-status-preparing {
+    background: #fff0e5;
+    color: #c05b18;
+  }
+  
+  .order-status-out-for-delivery {
+    background: #edf7ed;
+    color: #2e7d32;
+  }
+  
+  .order-status-delivered {
+    background: #e8f4e9;
+    color: #2e7d32;
+  }
+  
+  .order-status-cancelled {
+    background: #fdeaea;
+    color: #c62828;
+  }
+  
+  /* Right Side */
+  
+  .order-history-right {
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .order-history-total {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .order-history-total span {
+    color: #958378;
+    font-size: 12px;
+  }
+  
+  .order-history-total strong {
+    color: #3e2f28;
+    font-size: 18px;
+  }
+  
+  .order-history-payment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #76665c;
+    font-size: 12px;
+  }
+  
+  .payment-status {
+    font-weight: 700;
+  }
+  
+  .payment-status-paid {
+    color: #2e7d32;
+  }
+  
+  .payment-status-pending {
+    color: #a66a00;
+  }
+  
+  .payment-status-failed {
+    color: #c62828;
+  }
+  
+  .order-view-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 0 15px;
+    border-radius: 9px;
+    background: #c62828;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+  
+  .order-view-button:hover {
+    background: #a91f1f;
+    transform: translateY(-1px);
+  }
+  
+  /* Loading / Empty / Error */
+  
+  .orders-state {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .orders-state svg {
+    margin-bottom: 16px;
+    color: #c62828;
+  }
+  
+  .orders-state h1,
+  .orders-state h2 {
+    margin: 0;
+    color: #3e2f28;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .orders-state h1 {
+    font-size: 32px;
+  }
+  
+  .orders-state h2 {
+    font-size: 28px;
+  }
+  
+  .orders-state p {
+    max-width: 420px;
+    margin: 10px 0 24px;
+    color: #76665c;
+    line-height: 1.6;
+  }
+  
+  .orders-loading-spinner {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    border: 3px solid #eadfd2;
+    border-top-color: #c62828;
+    border-radius: 50%;
+    animation: orders-spinner 0.8s linear infinite;
+  }
+  
+  @keyframes orders-spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .orders-primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 22px;
+    border-radius: 10px;
+    background: #c62828;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+  
+  .orders-primary-button:hover {
+    background: #a91f1f;
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 850px) {
+    .order-history-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .order-history-right {
+      width: 100%;
+      min-width: 0;
+      align-items: flex-start;
+      padding-top: 4px;
+      border-top: 1px solid #eee4d9;
+    }
+  
+    .order-history-items {
+      max-width: 100%;
+    }
+  
+    .order-view-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .orders-page {
+      padding: 32px 0 60px;
+    }
+  
+    .orders-header h1 {
+      font-size: 30px;
+    }
+  
+    .order-history-card {
+      padding: 20px;
+      border-radius: 14px;
+    }
+  
+    .order-history-main {
+      gap: 12px;
+    }
+  
+    .order-history-icon {
+      width: 42px;
+      height: 42px;
+    }
+  
+    .order-history-title h2 {
+      font-size: 15px;
+    }
+  
+    .order-history-items {
+      white-space: normal;
+    }
+  }
